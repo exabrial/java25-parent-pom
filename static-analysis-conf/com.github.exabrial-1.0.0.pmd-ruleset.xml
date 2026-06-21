@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<ruleset name="com.github.exabrial-java25-parent-pom-pmd-ruleset"
+	xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 https://pmd.sourceforge.io/ruleset_2_0_0.xsd">
+	<description>PMD ruleset for com.github.exabrial java25-parent-pom - extends maven-pmd-plugin defaults</description>
+
+	<!-- Import the maven-pmd-plugin default ruleset -->
+	<rule ref="rulesets/java/maven-pmd-plugin-default.xml">
+		<exclude name="UnnecessaryModifier" />
+		<exclude name="TooManyStaticImports" />
+	</rule>
+
+	<!-- Re-include UnnecessaryModifier but suppress 'final' on methods in final classes -->
+	<rule ref="category/java/codestyle.xml/UnnecessaryModifier">
+		<properties>
+			<property name="violationSuppressRegex"
+				value=".*Unnecessary modifier 'final' on method.*the method is already in a final class.*" />
+		</properties>
+	</rule>
+</ruleset>

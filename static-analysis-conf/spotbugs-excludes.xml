@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter
+	xmlns="https://github.com/spotbugs/filter/3.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://github.com/spotbugs/filter/3.0.0 https://raw.githubusercontent.com/spotbugs/spotbugs/3.1.0/spotbugs/etc/findbugsfilter.xsd">
+	<!-- Project-local SpotBugs exclusions. These compose with (are added to) the global
+	     excludes in com.github.exabrial-<version>.spotbugs-excludes.xml. Every module that
+	     inherits this parent must ship its own static-analysis-conf/spotbugs-excludes.xml
+	     (the build references it directly); keep this one empty as the baseline/template. -->
+</FindBugsFilter>
