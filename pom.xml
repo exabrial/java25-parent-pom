@@ -83,26 +83,6 @@
 				<version>4.9.8</version>
 			</dependency>
 			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-core</artifactId>
-				<version>1.5.18</version>
-			</dependency>
-			<dependency>
-				<groupId>ch.qos.logback</groupId>
-				<artifactId>logback-classic</artifactId>
-				<version>1.5.18</version>
-			</dependency>
-			<dependency>
-				<groupId>de.siegmar</groupId>
-				<artifactId>logback-gelf</artifactId>
-				<version>6.1.1</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.exabrial</groupId>
-				<artifactId>logback-jms-appender</artifactId>
-				<version>1.1.0</version>
-			</dependency>
-			<dependency>
 				<groupId>org.junit.jupiter</groupId>
 				<artifactId>junit-jupiter-api</artifactId>
 				<version>5.14.3</version>
@@ -179,16 +159,6 @@
 			<groupId>com.github.spotbugs</groupId>
 			<artifactId>spotbugs-annotations</artifactId>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-core</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -605,8 +575,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<configuration>
-					<configLocation>
-						${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${checkstyle.config.file}</configLocation>
+					<configLocation>${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${checkstyle.config.file}</configLocation>
 					<failOnViolation>true</failOnViolation>
 					<logViolationsToConsole>true</logViolationsToConsole>
 					<consoleOutput>true</consoleOutput>
@@ -637,8 +606,7 @@
 					<effort>max</effort>
 					<threshold>low</threshold>
 					<excludeFilterFiles>
-						<excludeFilterFile>
-							${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${spotbugs.exclude.file}</excludeFilterFile>
+						<excludeFilterFile>${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${spotbugs.exclude.file}</excludeFilterFile>
 						<excludeFilterFile>${basedir}/static-analysis-conf/spotbugs-excludes.xml</excludeFilterFile>
 					</excludeFilterFiles>
 					<plugins>
@@ -775,8 +743,7 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<configuration>
-					<configLocation>
-						${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${checkstyle.config.file}</configLocation>
+					<configLocation>${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${checkstyle.config.file}</configLocation>
 				</configuration>
 			</plugin>
 			<plugin>
