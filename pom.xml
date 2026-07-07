@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.exabrial</groupId>
 	<artifactId>java25-parent-pom</artifactId>
-	<version>1-SNAPSHOT</version>
+	<version>1</version>
 	<packaging>pom</packaging>
 
 	<name>${project.artifactId}</name>
@@ -36,7 +35,7 @@
 		<connection>scm:git:ssh://git@github.com/exabrial/java25-parent-pom.git</connection>
 		<developerConnection>scm:git:ssh://git@github.com/exabrial/java25-parent-pom.git</developerConnection>
 		<url>https://github.com/exabrial/java25-parent-pom/tree/master</url>
-		<tag>HEAD</tag>
+		<tag>java25-parent-pom-1</tag>
 	</scm>
 
 	<properties>
@@ -552,20 +551,9 @@
 						<configuration>
 							<target>
 								<mkdir dir="${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf" />
-								<get
-									src="https://raw.githubusercontent.com/exabrial/java25-parent-pom/master/static-analysis-conf/${checkstyle.config.file}"
-									dest="${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${checkstyle.config.file}"
-									skipexisting="true"
-									ignoreerrors="true" />
-								<get src="https://raw.githubusercontent.com/exabrial/java25-parent-pom/master/static-analysis-conf/${pmd.ruleset.file}"
-									dest="${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${pmd.ruleset.file}"
-									skipexisting="true"
-									ignoreerrors="true" />
-								<get
-									src="https://raw.githubusercontent.com/exabrial/java25-parent-pom/master/static-analysis-conf/${spotbugs.exclude.file}"
-									dest="${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${spotbugs.exclude.file}"
-									skipexisting="true"
-									ignoreerrors="true" />
+								<get src="https://raw.githubusercontent.com/exabrial/java25-parent-pom/master/static-analysis-conf/${checkstyle.config.file}" dest="${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${checkstyle.config.file}" skipexisting="true" ignoreerrors="true" />
+								<get src="https://raw.githubusercontent.com/exabrial/java25-parent-pom/master/static-analysis-conf/${pmd.ruleset.file}" dest="${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${pmd.ruleset.file}" skipexisting="true" ignoreerrors="true" />
+								<get src="https://raw.githubusercontent.com/exabrial/java25-parent-pom/master/static-analysis-conf/${spotbugs.exclude.file}" dest="${settings.localRepository}/com/github/exabrial/java25-parent-pom/static-analysis-conf/${spotbugs.exclude.file}" skipexisting="true" ignoreerrors="true" />
 							</target>
 						</configuration>
 					</execution>
